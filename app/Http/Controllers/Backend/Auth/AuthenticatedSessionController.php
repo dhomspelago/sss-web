@@ -51,9 +51,11 @@ class AuthenticatedSessionController extends Controller
     {
         Auth::guard('backend')->logout();
 
-        $request->session()->invalidate();
+        if (! Auth::guard('web')->check()) {
+            $request->session()->invalidate();
 
-        $request->session()->regenerateToken();
+            $request->session()->regenerateToken();
+        }
 
         return redirect('backend/login');
     }
