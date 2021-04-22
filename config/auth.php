@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'backend' => [
+            'driver' => 'session',
+            'provider' => 'backend_users',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -71,10 +76,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+         'backend_users' => [
+             'driver' => 'eloquent',
+             'model' => App\Models\BackendUser::class,
+         ],
     ],
 
     /*
