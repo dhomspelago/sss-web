@@ -20,8 +20,9 @@
                           class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         email
                       </th>
-                      <th scope="col" class="relative px-6 py-3">
-                        <span class="sr-only">Action</span>
+                      <th scope="col"
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Actions
                       </th>
                     </tr>
                     </thead>
@@ -34,8 +35,15 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {{ $user->email }}
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                          <a href="#" class="text-indigo-600 hover:text-indigo-900">View</a>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                          <a href="#" class="text-blue-600 hover:text-blue-900 mr-1">View</a>
+                          <form method="POST" action="{{ route('backend.users.destroy', $user) }}">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="text-red-600 hover:text-red-900">
+                              Delete
+                            </button>
+                          </form>
                         </td>
                       </tr>
                     @empty

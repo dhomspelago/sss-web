@@ -16,4 +16,16 @@ class UserController extends Controller
             'users' => $users,
         ]);
     }
+
+    public function view(User $user)
+    {
+        //
+    }
+
+    public function destroy(User $user)
+    {
+        $user->delete();
+
+        return redirect()->route('backend.users.');
+    }
 }

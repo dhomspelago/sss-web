@@ -12,7 +12,8 @@ Route::middleware('auth:backend')->group(function () {
         return view('backend.dashboard');
     })->name('dashboard');
 
-    Route::prefix('users')->name('users')->group(function () {
+    Route::prefix('users')->name('users.')->group(function () {
         Route::get('', [UserController::class, 'index']);
+        Route::delete('{user}', [UserController::class, 'destroy'])->name('destroy');
     });
 });
