@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ContentStoreRequest;
 use App\Models\Content;
 
 class ContentController extends Controller
@@ -18,12 +19,16 @@ class ContentController extends Controller
 
     public function create()
     {
-        //
+        return view('backend.contents.create');
     }
 
-    public function store()
+    public function store(ContentStoreRequest $request)
     {
-        //
+        dd();
+        $request->file('image')->storeAs(
+            'contents',
+            $request->input('type') . '-' . time() . '.' . $request->file('image')->getClientOriginalExtension()
+        );
     }
 
     public function show(Content $content)

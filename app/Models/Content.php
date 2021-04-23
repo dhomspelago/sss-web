@@ -17,5 +17,6 @@ class Content extends Model
     protected $fillable = [
         'image',
         'type',
+        'is_published',
     ];
 }

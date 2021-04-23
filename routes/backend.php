@@ -20,6 +20,8 @@ Route::middleware('auth:backend')->group(function () {
 
     Route::prefix('contents')->name('contents.')->group(function () {
         Route::get('', [ContentController::class, 'index']);
+        Route::get('create', [ContentController::class, 'create'])->name('create');
+        Route::post('store', [ContentController::class, 'store'])->name('store');
         Route::delete('{content}', [ContentController::class, 'destroy'])->name('destroy');
     });
 });

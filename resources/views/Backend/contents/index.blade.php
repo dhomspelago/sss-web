@@ -10,9 +10,13 @@
               <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                 <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                   <div class="flex justify-end items-center pt-4 pr-2">
-                    <x-button class="bg-blue-600 mb-4">
+                    <a href="{{ route('backend.contents.create') }}"
+                       class="inline-flex items-center px-4 py-2 mb-4 bg-blue-600 border border-transparent rounded-md
+                       font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900
+                       focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition
+                        ease-in-out duration-150'4">
                       Create Announcement or Update
-                    </x-button>
+                    </a>
                   </div>
                   <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
