@@ -18,6 +18,9 @@
           <x-nav-link :href="route('backend.users.')" :active="request()->routeIs('backend.users.')">
             {{ __('Users') }}
           </x-nav-link>
+          <x-nav-link :href="route('backend.contents.')" :active="request()->routeIs('backend.contents.')">
+            {{ __('Announcement & Updates') }}
+          </x-nav-link>
         </div>
       </div>
 

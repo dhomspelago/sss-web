@@ -9,7 +9,11 @@ class ContentController extends Controller
 {
     public function index()
     {
-        //
+        $contents = Content::all();
+
+        return view('backend.contents.index', [
+            'contents' => $contents,
+        ]);
     }
 
     public function create()

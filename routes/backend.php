@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\Backend\ContentController;
 use App\Http\Controllers\Backend\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +16,9 @@ Route::middleware('auth:backend')->group(function () {
     Route::prefix('users')->name('users.')->group(function () {
         Route::get('', [UserController::class, 'index']);
         Route::delete('{user}', [UserController::class, 'destroy'])->name('destroy');
+    });
+
+    Route::prefix('contents')->name('contents.')->group(function () {
+        Route::get('', [ContentController::class, 'index']);
     });
 });

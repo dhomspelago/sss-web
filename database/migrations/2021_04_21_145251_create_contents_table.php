@@ -17,7 +17,9 @@ class CreateContentsTable extends Migration
             $table->id();
             $table->string('image');
             $table->string('type');
+            $table->boolean('is_published');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
