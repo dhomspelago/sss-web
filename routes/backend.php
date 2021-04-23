@@ -20,5 +20,6 @@ Route::middleware('auth:backend')->group(function () {
 
     Route::prefix('contents')->name('contents.')->group(function () {
         Route::get('', [ContentController::class, 'index']);
+        Route::delete('{content}', [ContentController::class, 'destroy'])->name('destroy');
     });
 });
