@@ -80,7 +80,9 @@
                           @endif
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                          <a href="#" class="text-blue-600 hover:text-blue-900 mr-1">View & Update</a>
+                          <a href="{{ route('backend.contents.show', $content) }}"
+                             class="text-blue-600 hover:text-blue-900 mr-1">View
+                            & Update</a>
                           <form method="POST" action="{{ route('backend.contents.destroy', $content) }}">
                             @csrf
                             @method('delete')

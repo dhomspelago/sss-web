@@ -21,7 +21,9 @@ Route::middleware('auth:backend')->group(function () {
     Route::prefix('contents')->name('contents.')->group(function () {
         Route::get('', [ContentController::class, 'index']);
         Route::get('create', [ContentController::class, 'create'])->name('create');
+        Route::get('show/{content}', [ContentController::class, 'show'])->name('show');
         Route::post('store', [ContentController::class, 'store'])->name('store');
+        Route::put('update/{content}', [ContentController::class, 'update'])->name('update');
         Route::delete('{content}', [ContentController::class, 'destroy'])->name('destroy');
     });
 });
