@@ -3,6 +3,7 @@
 @section('content')
   <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      @include('backend.includes.success')
       <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 bg-white border-b border-gray-200">
           <div class="flex flex-col">
@@ -54,7 +55,7 @@
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           <picture>
-                            <img src="{{ asset('assets/images/'. $content->image ) }}" alt="{{ $content->image  }}"
+                            <img src="{{ asset('content/'. $content->image ) }}" alt="{{ $content->image  }}"
                                  class="w-12 h-10">
                           </picture>
                         </td>
