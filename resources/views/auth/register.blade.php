@@ -5,24 +5,37 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
         <div class="p-6 bg-white border-b border-gray-200">
-          <h1 class="uppercase pb-4 text-blue-600">Register your account</h1>
           <div class="mt-10 sm:mt-0">
             @include('backend.includes.errors')
+            <h1 class="uppercase pb-4 text-blue-600">A.) PERSONAL DATA</h1>
             <div class="md:grid">
               <div class="mt-5 md:mt-0 md:col-span-2">
                 <form action="#" method="POST">
                   <div class="shadow overflow-hidden sm:rounded-md">
                     <div class="px-4 py-5 bg-white sm:p-6">
                       <div class="grid grid-cols-6 gap-6">
-                        <div class="col-span-6 sm:col-span-3">
+                        <div class="col-span-6 sm:col-span-2">
                           <label for="first_name" class="block text-sm font-medium text-gray-700">First name</label>
                           <input type="text" name="first_name" id="first_name" autocomplete="given-name"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
-                        <div class="col-span-6 sm:col-span-3">
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="middle_name" class="block text-sm font-medium text-gray-700">Middle name</label>
+                          <input type="text" name="last_name" id="middle_name" autocomplete="family-name"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
                           <label for="last_name" class="block text-sm font-medium text-gray-700">Last name</label>
                           <input type="text" name="last_name" id="last_name" autocomplete="family-name"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="email_address" class="block text-sm font-medium text-gray-700">Date of
+                            birth</label>
+                          <input type="date" name="email_address" id="email_address" autocomplete="email"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 

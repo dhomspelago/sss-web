@@ -35,6 +35,7 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger('father_id')->nullable();
             $table->unsignedBigInteger('mother_id')->nullable();
             $table->unsignedBigInteger('spouse_id')->nullable();
+            $table->unsignedBigInteger('other_id')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -54,6 +55,11 @@ class CreateUsersTable extends Migration
             $table->foreign('spouse_id')
                 ->references('id')
                 ->on('spouses')
+                ->nullOnDelete();
+
+            $table->foreign('other_id')
+                ->references('id')
+                ->on('others')
                 ->nullOnDelete();
 
         });
