@@ -17,9 +17,25 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
         'email',
         'password',
+        'first_name',
+        'middle_name',
+        'last_name',
+        'date_of_birth',
+        'gender',
+        'civil_status',
+        'tax_identification_number',
+        'nationality',
+        'religion',
+        'place_of_birth',
+        'home_address',
+        'baranggay',
+        'district',
+        'locality',
+        'zip_code',
+        'mobile_number',
+        'telephone_number',
     ];
 
     /**
@@ -40,4 +56,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getFullNameAttribute()
+    {
+        return $this->last_name . ', ' . $this->first_name;
+    }
 }

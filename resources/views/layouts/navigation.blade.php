@@ -44,7 +44,7 @@
                   class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent
                    rounded-lg  md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900
                    hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-white">
-            <span>{{ auth()->user()->name }}</span>
+            <span>{{ auth()->user()->full_name }}</span>
             <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
               <path fill-rule="evenodd"
@@ -65,11 +65,17 @@
                 href="#">Profile</a>
               <a
                 class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                href="#">Logout</a>
+                href="{{ route('logout') }}"
+                onclick="event.preventDefault();document.getElementById('logout').submit()">
+                Logout</a>
             </div>
           </div>
         </div>
       @endauth
+
+      <form method="POST" action="{{ route('logout') }}" id="logout" class="hidden">
+        @csrf
+      </form>
     </nav>
   </div>
 </div>
