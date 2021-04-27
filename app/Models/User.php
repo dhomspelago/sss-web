@@ -61,4 +61,24 @@ class User extends Authenticatable
     {
         return $this->last_name . ', ' . $this->first_name;
     }
+
+    public function father()
+    {
+        return $this->hasOne(Father::class);
+    }
+
+    public function mother()
+    {
+        return $this->hasOne(Mother::class);
+    }
+
+    public function spouse()
+    {
+        return $this->hasOne(Spouse::class);
+    }
+
+    public function childrens()
+    {
+        return $this->hasMany(Children::class);
+    }
 }

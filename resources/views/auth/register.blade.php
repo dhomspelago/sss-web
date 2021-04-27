@@ -3,12 +3,12 @@
 @section('content')
   <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-        <div class="ml-5">
-          @include('backend.includes.errors')
-        </div>
-        <form action="{{ route('register') }}" method="POST">
-          @csrf
+      <div class="ml-5">
+        @include('backend.includes.errors')
+      </div>
+      <form action="{{ route('register') }}" method="POST">
+        @csrf
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mb-10">
           <div class="p-6 bg-white border-b border-gray-200">
             <div class="mt-10 sm:mt-0">
               <h1 class="uppercase pb-4 text-blue-600">A.) PERSONAL DATA</h1>
@@ -55,7 +55,7 @@
                           </label>
                           <input type="password" name="password" id="password" required
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -64,7 +64,7 @@
                           </label>
                           <input type="password" name="password_confirmation" id="password_confirmation" required
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -75,7 +75,7 @@
                                  value="{{ old('date_of_birth') }}"
                                  required
                                  class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -86,7 +86,7 @@
                                  required
                                  value="{{ old('place_of_birth') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
 
@@ -97,7 +97,7 @@
                           <select id="gender" name="gender"
                                   required
                                   class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md
-                                   shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                           shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                             <option value="male">MALE</option>
                             <option value="female">FEMALE</option>
                           </select>
@@ -110,7 +110,7 @@
                           <select id="civil_status" name="civil_status"
                                   required
                                   class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md
-                                   shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                           shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                             <option value="single">Single</option>
                             <option value="married">Married</option>
                             <option value="divorced">Divorced</option>
@@ -125,7 +125,7 @@
                           <input type="text" name="tax_identification_number" id="tax_identification_number"
                                  value="{{ old('tax_identification_number') }}"
                                  class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -136,7 +136,7 @@
                                  required
                                  value="{{ old('nationality') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -147,7 +147,7 @@
                                  required
                                  value="{{ old('religion') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6">
@@ -161,7 +161,7 @@
                           <input type="text" name="home_address" id="home_address" required
                                  value="{{ old('home_address') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                  shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                          shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -171,7 +171,7 @@
                           <input type="text" name="baranggay" id="baranggay" required
                                  value="{{ old('baranggay') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-1">
@@ -181,7 +181,7 @@
                           <input type="text" name="district" id="district" required
                                  value="{{ old('district') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -191,7 +191,7 @@
                           <input type="text" name="locality" id="locality" required
                                  value="{{ old('locality') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-1">
@@ -201,7 +201,7 @@
                           <input type="number" name="zip_code" id="zip_code" required
                                  value="{{ old('zip_code') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-3">
@@ -212,7 +212,7 @@
                                  value="{{ old('mobile_number') }}"
                                  required
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-3">
@@ -221,7 +221,7 @@
                           <input type="number" name="telephone_number" id="telephone_number"
                                  value="{{ old('telephone_number') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -275,6 +275,251 @@
 
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mb-10">
+          <div class="p-6 bg-white border-b border-gray-200">
+            <div class="mt-10 sm:mt-0">
+              <h1 class="uppercase pb-4 text-blue-600">B.) Dependent(s) / Beneficiary/ies</h1>
+              <div class="md:grid">
+                <div class="mt-5 md:mt-0 md:col-span-2">
+                  <div class="shadow overflow-hidden sm:rounded-md">
+                    <div class="px-4 py-5 bg-white sm:p-6">
+                      <div class="grid grid-cols-6 gap-6">
+                        <div class="col-span-6">
+                          <span class="font-bold">Spouse</span>
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="s_first_name" class="block text-sm font-medium text-gray-700">
+                            First name</label>
+                          <input type="text" name="spouse[first_name]" id="s_first_name" autocomplete="given-name"
+                                 value="{{ old('spouse')['first_name'] ?? null }}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="s_middle_name" class="block text-sm font-medium text-gray-700">Middle name</label>
+                          <input type="text" name="spouse[middle_name]" id="s_middle_name" autocomplete="family-name"
+                                 value="{{ old('spouse')['middle_name'] ?? null }}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="s_last_name" class="block text-sm font-medium text-gray-700">
+                            Last name
+                          </label>
+                          <input type="text" name="spouse[last_name]" id="s_last_name" autocomplete="family-name"
+                                 value="{{ old('spouse')['last_name'] ?? null }}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="s_date_of_birth" class="block text-sm font-medium text-gray-700">
+                            Date of birth
+                          </label>
+                          <input type="date" name="spouse[date_of_birth]" id="s_date_of_birth"
+                                 min="1901-01-01"
+                                 value="{{ old('spouse')['date_of_birth'] ?? null }}"
+                                 class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
+                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                        <div class="col-span-6">
+                          <span class="font-bold">Children</span>
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="c_first_name" class="block text-sm font-medium text-gray-700">First name</label>
+                          <input type="text" name="children[0][first_name]" id="c_first_name"
+                                 autocomplete="given-name"
+                                 value="{{ old('children')[0]['first_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="f_middle_name" class="block text-sm font-medium text-gray-700">Middle name</label>
+                          <input type="text" name="children[0][middle_name]" id="f_middle_name"
+                                 autocomplete="given-name"
+                                 value="{{ old('children')[0]['middle_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="f_last_name" class="block text-sm font-medium text-gray-700">Last name</label>
+                          <input type="text" name="children[0][last_name]" id="f_last_name" autocomplete="given-name"
+                                 value="{{ old('children')[0]['last_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="date_of_birth" class="block text-sm font-medium text-gray-700">
+                            Date of birth
+                          </label>
+                          <input type="date" name="children[0][date_of_birth]" id="date_of_birth"
+                                 min="1901-01-01"
+                                 value="{{ old('children')[0]['date_of_birth'] ?? null}}"
+                                 class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
+                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="c_first_name" class="block text-sm font-medium text-gray-700">
+                            First name</label>
+                          <input type="text" name="children[1][first_name]" id="c_first_name"
+                                 autocomplete="given-name"
+                                 value="{{ old('children')[1]['first_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="f_middle_name" class="block text-sm font-medium text-gray-700">
+                            Middle name</label>
+                          <input type="text" name="children[1][middle_name]" id="f_middle_name"
+                                 autocomplete="given-name"
+                                 value="{{ old('children')[1]['middle_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="f_last_name" class="block text-sm font-medium text-gray-700">
+                            Last name</label>
+                          <input type="text" name="children[1][last_name]" id="f_last_name" autocomplete="given-name"
+                                 value="{{ old('children')[1]['last_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="date_of_birth" class="block text-sm font-medium text-gray-700">
+                            Date of birth
+                          </label>
+                          <input type="date" name="children[1][date_of_birth]" id="date_of_birth"
+                                 min="1901-01-01"
+                                 value="{{ old('children')[1]['date_of_birth'] ?? null}}"
+                                 class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
+                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="c_first_name" class="block text-sm font-medium text-gray-700">
+                            First name</label>
+                          <input type="text" name="children[2][first_name]" id="c_first_name"
+                                 autocomplete="given-name"
+                                 value="{{ old('children')[2]['first_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="f_middle_name" class="block text-sm font-medium text-gray-700">
+                            Middle name</label>
+                          <input type="text" name="children[2][middle_name]" id="f_middle_name"
+                                 autocomplete="given-name"
+                                 value="{{ old('children')[2]['middle_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="f_last_name" class="block text-sm font-medium text-gray-700">
+                            Last name</label>
+                          <input type="text" name="children[2][last_name]" id="f_last_name" autocomplete="given-name"
+                                 value="{{ old('children')[2]['last_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="date_of_birth" class="block text-sm font-medium text-gray-700">
+                            Date of birth
+                          </label>
+                          <input type="date" name="children[2][date_of_birth]" id="date_of_birth"
+                                 min="1901-01-01"
+                                 value="{{ old('children')[2]['date_of_birth'] ?? null}}"
+                                 class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
+                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="c_first_name" class="block text-sm font-medium text-gray-700">
+                            First name</label>
+                          <input type="text" name="children[3][first_name]" id="c_first_name"
+                                 autocomplete="given-name"
+                                 value="{{ old('children')[3]['first_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="f_middle_name" class="block text-sm font-medium text-gray-700">
+                            Middle name</label>
+                          <input type="text" name="children[3][middle_name]" id="f_middle_name"
+                                 autocomplete="given-name"
+                                 value="{{ old('children')[3]['middle_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="f_last_name" class="block text-sm font-medium text-gray-700">
+                            Last name</label>
+                          <input type="text" name="children[3][last_name]" id="f_last_name" autocomplete="given-name"
+                                 value="{{ old('children')[3]['last_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="date_of_birth" class="block text-sm font-medium text-gray-700">
+                            Date of birth
+                          </label>
+                          <input type="date" name="children[3][date_of_birth]" id="date_of_birth"
+                                 min="1901-01-01"
+                                 value="{{ old('children')[3]['date_of_birth'] ?? null}}"
+                                 class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
+                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="c_first_name" class="block text-sm font-medium text-gray-700">
+                            First name</label>
+                          <input type="text" name="children[4][first_name]" id="c_first_name"
+                                 autocomplete="given-name"
+                                 value="{{ old('children')[4]['first_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="f_middle_name" class="block text-sm font-medium text-gray-700">
+                            Middle name</label>
+                          <input type="text" name="children[4][middle_name]" id="f_middle_name"
+                                 autocomplete="given-name"
+                                 value="{{ old('children')[4]['middle_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="f_last_name" class="block text-sm font-medium text-gray-700">
+                            Last name</label>
+                          <input type="text" name="children[4][last_name]" id="f_last_name" autocomplete="given-name"
+                                 value="{{ old('children')[4]['last_name'] ?? null}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-1">
+                          <label for="date_of_birth" class="block text-sm font-medium text-gray-700">
+                            Date of birth
+                          </label>
+                          <input type="date" name="children[4][date_of_birth]" id="date_of_birth"
+                                 min="1901-01-01"
+                                 value="{{ old('children')[4]['date_of_birth'] ?? null}}"
+                                 class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
+                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+
+                      </div>
+                    </div>
                     <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                       <button type="submit"
                               class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
@@ -286,8 +531,8 @@
               </div>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </div>
 @endsection

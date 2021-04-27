@@ -60,16 +60,22 @@ class RegisteredUserController extends Controller
         ]);
 
         $this->storeFathersName(
+            $user,
             $request->input('f_first_name'),
             $request->input('f_middle_name'),
             $request->input('f_last_name')
         );
 
         $this->storeMothersName(
+            $user,
             $request->input('m_first_name'),
             $request->input('m_middle_name'),
             $request->input('m_last_name')
         );
+
+        $this->storeSpouse($user, $request->input('spouse'));
+
+        $this->storeChildren($user, $request->input('children'));
 
         event(new Registered($user));
 
@@ -78,21 +84,59 @@ class RegisteredUserController extends Controller
         return redirect(RouteServiceProvider::HOME);
     }
 
-    private function storeFathersName($firstName, $middleName, $lastName)
+    private function storeFathersName($user, $firstName, $middleName, $lastName)
     {
-        Father::query()->create([
+        $user->father()->create([
             'first_name' => $firstName,
             'middle_name' => $middleName,
             'last_name' => $lastName,
         ]);
     }
 
-    private function storeMothersName($firstName, $middleName, $lastName)
+    private function storeMothersName($user, $firstName, $middleName, $lastName)
     {
-        Mother::query()->create([
+        $user->mother()->create([
             'first_name' => $firstName,
             'middle_name' => $middleName,
             'last_name' => $lastName,
         ]);
+    }
+
+    private function storeSpouse($user, $spouse)
+    {
+        if (! is_null($spouse['first_name']) && ! is_null($spouse['last_name'])) {
+            $user->spouse()->create([
+                'first_name' => $spouse['first_name'],
+                'middle_name' => $spouse['middle_name'],
+                'last_name' => $spouse['last_name'],
+                'date_of_birth' => ! is_null($spouse['date_of_birth']) ? Carbon::parse($spouse['date_of_birth']) : null,
+            ]);
+        }
+    }
+
+    private function storeChildren($user, $childrens)
+    {
+        $items = $this->removeNullItem($childrens);
+
+        foreach ($items as $data) {
+            $user->childrens()->create([
+                'first_name' => $data['first_name'],
+                'middle_name' => $data['middle_name'],
+                'last_name' => $data['last_name'],
+                'date_of_birth' => ! is_null($data['date_of_birth']) ? Carbon::parse($data['date_of_birth']) : null,
+            ]);
+        }
+
+    }
+
+    private function removeNullItem(array $items)
+    {
+        foreach ($items as $key => $data) {
+            if (is_null($data['first_name']) && is_null($data['last_name'])) {
+                unset($items[$key]);
+            }
+        }
+
+        return $items;
     }
 }

@@ -15,12 +15,18 @@ class CreateOthersTable extends Migration
     {
         Schema::create('others', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->string('profession_business')->nullable();
             $table->string('foreign_address')->nullable();
             $table->date('business_started')->nullable();
             $table->decimal('self_monthly_earning', 10, 2)->nullable();
             $table->decimal('overseas_monthly_earning', 10, 2)->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->cascadeOnDelete();
         });
     }
 

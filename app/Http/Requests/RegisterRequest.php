@@ -106,8 +106,7 @@ class RegisterRequest extends FormRequest
             ],
             'mobile_number' => [
                 'required',
-                'numeric',
-                'min:11',
+                'digits:11',
             ],
         ];
     }
