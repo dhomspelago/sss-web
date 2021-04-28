@@ -55,7 +55,7 @@
                           </label>
                           <input type="password" name="password" id="password" required
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -64,7 +64,7 @@
                           </label>
                           <input type="password" name="password_confirmation" id="password_confirmation" required
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -75,7 +75,7 @@
                                  value="{{ old('date_of_birth') }}"
                                  required
                                  class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -86,7 +86,7 @@
                                  required
                                  value="{{ old('place_of_birth') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
 
@@ -97,7 +97,7 @@
                           <select id="gender" name="gender"
                                   required
                                   class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md
-                                           shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                                   shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                             <option value="male">MALE</option>
                             <option value="female">FEMALE</option>
                           </select>
@@ -110,7 +110,7 @@
                           <select id="civil_status" name="civil_status"
                                   required
                                   class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md
-                                           shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                                   shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                             <option value="single">Single</option>
                             <option value="married">Married</option>
                             <option value="divorced">Divorced</option>
@@ -125,7 +125,7 @@
                           <input type="text" name="tax_identification_number" id="tax_identification_number"
                                  value="{{ old('tax_identification_number') }}"
                                  class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -136,7 +136,7 @@
                                  required
                                  value="{{ old('nationality') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -147,7 +147,7 @@
                                  required
                                  value="{{ old('religion') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6">
@@ -161,7 +161,7 @@
                           <input type="text" name="home_address" id="home_address" required
                                  value="{{ old('home_address') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                          shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                  shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -171,7 +171,7 @@
                           <input type="text" name="baranggay" id="baranggay" required
                                  value="{{ old('baranggay') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-1">
@@ -181,7 +181,7 @@
                           <input type="text" name="district" id="district" required
                                  value="{{ old('district') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -191,7 +191,7 @@
                           <input type="text" name="locality" id="locality" required
                                  value="{{ old('locality') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-1">
@@ -201,7 +201,7 @@
                           <input type="number" name="zip_code" id="zip_code" required
                                  value="{{ old('zip_code') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-3">
@@ -212,7 +212,7 @@
                                  value="{{ old('mobile_number') }}"
                                  required
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-3">
@@ -221,7 +221,7 @@
                           <input type="number" name="telephone_number" id="telephone_number"
                                  value="{{ old('telephone_number') }}"
                                  class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
                         <div class="col-span-6 sm:col-span-2">
@@ -325,7 +325,7 @@
                                  min="1901-01-01"
                                  value="{{ old('spouse')['date_of_birth'] ?? null }}"
                                  class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
                         <div class="col-span-6">
                           <span class="font-bold">Children</span>
@@ -362,7 +362,7 @@
                                  min="1901-01-01"
                                  value="{{ old('children')[0]['date_of_birth'] ?? null}}"
                                  class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
 
@@ -400,7 +400,7 @@
                                  min="1901-01-01"
                                  value="{{ old('children')[1]['date_of_birth'] ?? null}}"
                                  class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
 
@@ -438,7 +438,7 @@
                                  min="1901-01-01"
                                  value="{{ old('children')[2]['date_of_birth'] ?? null}}"
                                  class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
 
@@ -476,7 +476,7 @@
                                  min="1901-01-01"
                                  value="{{ old('children')[3]['date_of_birth'] ?? null}}"
                                  class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
-                                 shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
 
@@ -514,9 +514,94 @@
                                  min="1901-01-01"
                                  value="{{ old('children')[4]['date_of_birth'] ?? null}}"
                                  class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
+                                         shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mb-10">
+          <div class="p-6 bg-white border-b border-gray-200">
+            <div class="mt-10 sm:mt-0">
+              <h1 class="uppercase pb-4 text-blue-600">
+                C.) For Self-Employed/Overseas Filipino Worker/Non-Working Spouse
+              </h1>
+              <div class="md:grid">
+                <div class="mt-5 md:mt-0 md:col-span-2">
+                  <div class="shadow overflow-hidden sm:rounded-md">
+                    <div class="px-4 py-5 bg-white sm:p-6">
+                      <div class="grid grid-cols-6 gap-6">
+                        <div class="col-span-6">
+                          <span class="font-bold">Self Employed (SE)</span>
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="profession_business" class="block text-sm font-medium text-gray-700">
+                            Profession Business
+                          </label>
+                          <input type="text" name="profession_business" id="profession_business"
+                                 value="{{ old('profession_business')}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="business_started" class="block text-sm font-medium text-gray-700">
+                            Business Started
+                          </label>
+                          <input type="date" name="business_started" id="business_started"
+                                 value="{{ old('business_started')}}"
+                                 class="b-day mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full
                                  shadow-sm sm:text-sm border-gray-300 rounded-md">
                         </div>
 
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="self_monthly_earning" class="block text-sm font-medium text-gray-700">
+                            Monthly Earning
+                          </label>
+                          <input type="number" name="self_monthly_earning" id="self_monthly_earning"
+                                 value="{{ old('self_monthly_earning')}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                        <div class="col-span-6">
+                          <span class="font-bold">Overseas Filipino Worker (OFW)</span>
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-4">
+                          <label for="foreign_address" class="block text-sm font-medium text-gray-700">
+                            Foreign Address
+                          </label>
+                          <input type="text" name="foreign_address" id="foreign_address"
+                                 value="{{ old('foreign_address')}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6 sm:col-span-2">
+                          <label for="overseas_monthly_earning" class="block text-sm font-medium text-gray-700">
+                            Monthly Earning
+                          </label>
+                          <input type="number" name="overseas_monthly_earning" id="overseas_monthly_earning"
+                                 value="{{ old('overseas_monthly_earning')}}"
+                                 class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                        </div>
+
+                        <div class="col-span-6">
+                          <label for="is_applying_for_membership" class="block text-sm font-medium text-gray-700">
+                            Are you applying for membership in the Flex Fund Program?
+                            <br>
+                            <small class="text-gray-500 italic">
+                              Note: Check the box below if Yes leave if blank if No
+                            </small>
+                          </label>
+                          <input type="checkbox" name="is_applying_for_membership" id="is_applying_for_membership"
+                                 value="on"
+                            {{ old('is_applying_for_membership') === 'on' ? 'checked' : ''}}>
+                        </div>
 
                       </div>
                     </div>
@@ -546,7 +631,9 @@
     const formattedDate = subtractedDate.getFullYear() + '-' + ('0' + month).slice(-2) + '-' + ('0' + day).slice(-2)
 
     document.querySelectorAll('input[type=date]').forEach(function (e) {
-      e.setAttribute('max', formattedDate)
+      if (e.getAttribute('name') !== 'business_started') {
+        e.setAttribute('max', formattedDate)
+      }
     })
   </script>
 @endsection

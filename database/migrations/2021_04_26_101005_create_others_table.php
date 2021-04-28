@@ -21,6 +21,7 @@ class CreateOthersTable extends Migration
             $table->date('business_started')->nullable();
             $table->decimal('self_monthly_earning', 10, 2)->nullable();
             $table->decimal('overseas_monthly_earning', 10, 2)->nullable();
+            $table->boolean('is_applying_for_membership');
             $table->timestamps();
 
             $table->foreign('user_id')

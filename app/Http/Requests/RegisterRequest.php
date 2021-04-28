@@ -108,6 +108,14 @@ class RegisterRequest extends FormRequest
                 'required',
                 'digits:11',
             ],
+
+            'profession_business' => [
+                'string',
+                'max:255',
+            ],
+            'business_started' => [
+                'date',
+            ],
         ];
     }
 }

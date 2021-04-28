@@ -77,6 +77,16 @@ class RegisteredUserController extends Controller
 
         $this->storeChildren($user, $request->input('children'));
 
+        $this->storeOthers(
+            $user,
+            $request->input('profession_business'),
+            $request->input('foreign_address'),
+            $request->input('business_started'),
+            $request->input('self_monthly_earning'),
+            $request->input('overseas_monthly_earning'),
+            $request->has('is_applying_for_membership')
+        );
+
         event(new Registered($user));
 
         Auth::login($user);
@@ -138,5 +148,29 @@ class RegisteredUserController extends Controller
         }
 
         return $items;
+    }
+
+    private function storeOthers(
+        $user,
+        $professionBusiness,
+        $foreignAddress,
+        $businessStarted,
+        $sMonthlyEarning,
+        $oMonthlyEarning,
+        $isApplying
+    ) {
+        if (! is_null($professionBusiness) || ! is_null($foreignAddress)) {
+            $user->other()->create([
+                'profession_business' => $professionBusiness,
+                'foreign_address' => $foreignAddress,
+                'business_started' =>
+                    $businessStarted
+                        ? Carbon::parse($businessStarted)
+                        : null,
+                'self_monthly_earning' => $sMonthlyEarning,
+                'overseas_monthly_earning' => $oMonthlyEarning,
+                'is_applying_for_membership' => $isApplying,
+            ]);
+        }
     }
 }
