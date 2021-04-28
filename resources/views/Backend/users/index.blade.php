@@ -14,11 +14,19 @@
                     <tr>
                       <th scope="col"
                           class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Name
+                        Full Name
                       </th>
                       <th scope="col"
                           class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        email
+                        Email
+                      </th>
+                      <th scope="col"
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Date of Birth
+                      </th>
+                      <th scope="col"
+                          class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Gender
                       </th>
                       <th scope="col"
                           class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -30,10 +38,16 @@
                     @forelse($users as $user)
                       <tr>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                          {{ $user->name }}
+                          {{ $user->full_name }}
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                           {{ $user->email }}
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {{ $user->date_of_birth }}
+
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 capitalize">
+                          {{ $user->gender }}
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                           <a href="#" class="text-blue-600 hover:text-blue-900 mr-1">View</a>
