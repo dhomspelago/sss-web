@@ -64,7 +64,7 @@ class ContentController extends Controller
         $content->save();
 
         session()->flash('notify', [
-            'message' => ucfirst($data['type']) . ' successfully created!',
+            'message' => ucfirst($data['type']) . ' successfully updated!',
         ]);
 
         return redirect()->route('backend.contents.');

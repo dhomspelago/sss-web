@@ -28,6 +28,10 @@ class UserController extends Controller
     {
         $user->delete();
 
+        session()->flash('notify', [
+            'message' => 'Successfully deleted!',
+        ]);
+
         return redirect()->route('backend.users.');
     }
 }
