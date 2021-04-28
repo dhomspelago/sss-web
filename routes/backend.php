@@ -16,6 +16,7 @@ Route::middleware('auth:backend')->group(function () {
     Route::prefix('users')->name('users.')->group(function () {
         Route::get('', [UserController::class, 'index']);
         Route::delete('{user}', [UserController::class, 'destroy'])->name('destroy');
+        Route::get('show/{user}', [UserController::class, 'show'])->name('show');
     });
 
     Route::prefix('contents')->name('contents.')->group(function () {

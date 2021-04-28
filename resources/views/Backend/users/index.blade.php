@@ -50,7 +50,8 @@
                           {{ $user->gender }}
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                          <a href="#" class="text-blue-600 hover:text-blue-900 mr-1">View</a>
+                          <a href="{{ route('backend.users.show', $user) }}"
+                             class="text-blue-600 hover:text-blue-900 mr-1">View</a>
                           <form method="POST" action="{{ route('backend.users.destroy', $user) }}">
                             @csrf
                             @method('delete')

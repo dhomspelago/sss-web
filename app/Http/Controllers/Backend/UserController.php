@@ -17,9 +17,11 @@ class UserController extends Controller
         ]);
     }
 
-    public function view(User $user)
+    public function show(User $user)
     {
-        //
+        return view('backend.users.show', [
+            'user' => $user,
+        ]);
     }
 
     public function destroy(User $user)
