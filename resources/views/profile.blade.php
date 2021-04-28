@@ -431,7 +431,7 @@
                         </label>
                         <input type="checkbox" name="is_applying_for_membership" id="is_applying_for_membership"
                                value="on"
-                               readonly
+                               onclick="return false;"
                           {{ $user->other->is_applying_for_membership  ? 'checked' : ''}}>
                       </div>
 
