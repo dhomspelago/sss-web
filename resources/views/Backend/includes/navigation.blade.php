@@ -75,8 +75,14 @@
   <!-- Responsive Navigation Menu -->
   <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
     <div class="pt-2 pb-3 space-y-1">
-      <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+      <x-responsive-nav-link :href="route('backend.dashboard')" :active="request()->routeIs('backend.dashboard')">
         {{ __('Dashboard') }}
+      </x-responsive-nav-link>
+      <x-responsive-nav-link :href="route('backend.users.')" :active="request()->routeIs('backend.users.*')">
+        {{ __('Users') }}
+      </x-responsive-nav-link>
+      <x-responsive-nav-link :href="route('backend.contents.')" :active="request()->routeIs('backend.contents.*')">
+        {{ __('Announcement & Updates') }}
       </x-responsive-nav-link>
     </div>
 
